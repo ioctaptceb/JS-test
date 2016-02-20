@@ -1,0 +1,17 @@
+{
+  "name": "test-practice",
+  "version": "1.0.0",
+  "description": "test practice",
+  "main": "app/main.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine": "^2.4.1",
+    "mocha": "^2.4.5",
+    "tape": "^4.4.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "ioctaptceb",
+  "license": "ISC"
+}
