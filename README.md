@@ -1,4 +1,5 @@
-# JS testing ( a guide I write for myself, as I learn )
+# JS testing
+( a guide I write for myself, as I learn )
 
 Description:
 
@@ -10,9 +11,9 @@ This repo contains a test app, which will be developed using TDD. The requiremen
 
 This readme is a primer, with a very basic setup in case anyone wants to replicate the steps in this project. The notes from working with the frameworks themselves are found here:
 
-JASMINE.md
-MOCHA.md
-TAPE.md
+- JASMINE.md
+- MOCHA.md
+- TAPE.md
 
 #### in the beginning...
 
