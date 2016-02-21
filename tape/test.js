@@ -81,5 +81,13 @@ test('A line', function (suite) {
     t.end()
   });
 
+  suite.test('has multiple slopes', function (t) {
+    var line = new Gmtry.Line(2, 4, 5, 9);
+    var intersectPoint = line.intersectX(5);
+    t.equal(intersectPoint.x, 5);
+    t.equal(intersectPoint.y, 384);
+    t.end();
+  });
+
   suite.end();
 });

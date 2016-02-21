@@ -56,10 +56,19 @@ describe('A line', function () {
     expect(line.offset).toBe(2);
   });
 
+
   it('intersects the line at x', function () {
     var line = new Gmtry.Line(1, 3);
     var intersectPoint = line.intersectX(5);
     expect(intersectPoint.x).toBe(5);
     expect(intersectPoint.y).toBe(8);
   });
+
+  it('has multiple slopes', function () {
+    var line = new Gmtry.Line(2, 4, 5, 9);
+    var intersectPoint = line.intersectX(5);
+    expect(intersectPoint.x).toBe(5);
+    expect(intersectPoint.y).toBe(384);
+  });
+
 });

@@ -63,4 +63,12 @@ describe('A line', function () {
     assert.equal(intersectPoint.x, 5);
     assert.equal(intersectPoint.y, 8);
   });
+
+  it('has multiple slopes', function () {
+    var line = new Gmtry.Line(2, 4, 5, 9);
+    var intersectPoint = line.intersectX(5);
+    assert.equal(intersectPoint.x, 5);
+    assert.equal(intersectPoint.y, 384);
+  });
+
 });
