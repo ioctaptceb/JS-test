@@ -8,6 +8,11 @@ function Geometry() {
     this.y = y;
   }
 
+  Line.prototype.intersectX = function intersectX (x) {
+    var y = this.slope * x + this.offset;
+    return new Point(x, y);
+  }
+
   function Line(slope, offset) {
     this.slope = slope;
     this.offset = offset;
