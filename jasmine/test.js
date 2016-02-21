@@ -50,4 +50,9 @@ describe('A line', function () {
     var line = new Gmtry.Line(0, 0);
     expect(line.slope).toBe(0);
   });
+
+  it('has an offset', function () {
+    var line = new Gmtry.Line(0, 2);
+    expect(line.offset).toBe(2);
+  });
 });

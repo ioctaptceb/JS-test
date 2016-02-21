@@ -61,10 +61,17 @@ test('Line', function (suite) {
 });
 
 test('A line', function (suite) {
-  suite.test('exsits', function (t) {
+  suite.test('has a slope', function (t) {
     var line = new Gmtry.Line(0, 0);
     t.equal(line.slope, 0);
     t.end();
   });
+
+  suite.test('has an offset', function (t) {
+    var line = new Gmtry.Line(0, 2);
+    t.equal(line.offset, 2);
+    t.end()
+  });
+
   suite.end();
 });

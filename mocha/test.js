@@ -51,4 +51,9 @@ describe('A line', function () {
     var line = new Gmtry.Line(0, 0);
     assert.equal(line.slope, 0);
   });
+
+  it('should have an offset', function () {
+    var line = new Gmtry.Line(0, 2);
+    assert.equal(line.offset, 2);
+  });
 });
