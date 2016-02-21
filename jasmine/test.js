@@ -55,4 +55,11 @@ describe('A line', function () {
     var line = new Gmtry.Line(0, 2);
     expect(line.offset).toBe(2);
   });
+
+  it('intersects the line at x', function () {
+    var line = new Gmtry.Line(1, 3);
+    var intersectPoint = line.intersectX(5);
+    expect(intersectPoint.x).toBe(5);
+    expect(intersectPoint.y).toBe(8);
+  });
 });

@@ -73,5 +73,13 @@ test('A line', function (suite) {
     t.end()
   });
 
+  suite.test('has a method to intersect at x', function (t) {
+    var line = new Gmtry.Line(1, 3);
+    var intersectPoint = line.intersectX(5);
+    t.equal(intersectPoint.x, 5);
+    t.equal(intersectPoint.y, 8);
+    t.end()
+  });
+
   suite.end();
 });

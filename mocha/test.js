@@ -56,4 +56,11 @@ describe('A line', function () {
     var line = new Gmtry.Line(0, 2);
     assert.equal(line.offset, 2);
   });
+
+  it('has a method to intersect the line at x', function () {
+    var line = new Gmtry.Line(1, 3);
+    var intersectPoint = line.intersectX(5);
+    assert.equal(intersectPoint.x, 5);
+    assert.equal(intersectPoint.y, 8);
+  });
 });
