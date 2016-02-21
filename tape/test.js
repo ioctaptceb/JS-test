@@ -63,7 +63,7 @@ test('Line', function (suite) {
 test('A line', function (suite) {
   suite.test('has a slope', function (t) {
     var line = new Gmtry.Line(0, 0);
-    t.equal(line.slope, 0);
+    t.equal(line.terms[0], 0);
     t.end();
   });
 

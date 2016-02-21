@@ -49,7 +49,7 @@ describe('Line', function () {
 describe('A line', function () {
   it('should have a slope', function () {
     var line = new Gmtry.Line(0, 0);
-    assert.equal(line.slope, 0);
+    assert.equal(line.terms[0], 0);
   });
 
   it('should have an offset', function () {
