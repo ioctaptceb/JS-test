@@ -5,6 +5,10 @@ describe('Point Class', function () {
   it('should Exist', function () {
     assert.equal(typeof Gmtry.Point, 'function');
   });
+
+  it('should have a shift method', function () {
+    assert.equal(typeof Gmtry.Point.prototype.shift, 'function');
+  });
 });
 
 describe('A point', function () {
@@ -22,4 +26,5 @@ describe('A point', function () {
     var point = new Gmtry.Point(0, 50);
     assert.equal(point.y, 50);
   });
+
 });

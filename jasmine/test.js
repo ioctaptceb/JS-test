@@ -4,6 +4,10 @@ describe('Point', function () {
   it('Exists', function () {
     expect(Gmtry.Point).toBeDefined();
   });
+
+  it('has a shift method', function () {
+    expect(Gmtry.Point.prototype.shift).toBeDefined();
+  });
 });
 
 describe('A point', function () {
@@ -21,4 +25,5 @@ describe('A point', function () {
     var point = new Gmtry.Point(0, 50);
     expect(point.y).toBe(50);
   });
+
 });
