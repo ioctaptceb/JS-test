@@ -8,9 +8,13 @@ function Geometry() {
     this.y = y;
   }
 
-  return {
-    Point: Point
+  function Line() {
   }
+
+  return {
+    Point: Point,
+    Line: Line
+  };
 }
 
 module.exports = Geometry();
