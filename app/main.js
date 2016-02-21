@@ -1,4 +1,6 @@
 function Geometry() {
+  Point.prototype.shift = function shiftPoint () {
+  }
 
   function Point(x, y) {
     this.x = x;
