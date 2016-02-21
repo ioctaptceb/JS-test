@@ -9,12 +9,6 @@ I've come across a number of testing frameworks for JS, and have worked mostly w
 
 This repo contains a test app, which will be developed using TDD. The requirements for the app and cycles can be found in app.md
 
-This readme is a primer, with a very basic setup in case anyone wants to replicate the steps in this project. The notes from working with the frameworks themselves are found here:
-
-- JASMINE.md
-- MOCHA.md
-- TAPE.md
-
 #### in the beginning...
 
 For all testing libraries, I have the following setup
@@ -31,9 +25,12 @@ For all testing libraries, I have the following setup
 
 Jasmine is a standard js testing library, that provides basic assertion methods and is heavily based on Rspec, making it a perfect fit in a ruby environment. Jasmine requires a task runner and several other depencancies, or can be run in a browser
 
-Jasmine cannot be run from the local project without the path (ie ./node_modules/jasmine/bin/jasmine.js)
-Jasmine can be run if globally installed, but is better when it is locally installed
-Jasmine requires initialization.
+#### Observations
+- does not give a detailed view on which tests run, and does not have a default verbose mode. Which is quite unfortunate, as I would like to be able to see what tests exist in the suite when I run them
+- cannot be run from the local project without the path (ie ./node_modules/jasmine/bin/jasmine.js)
+- can be run if globally installed, but is better when it is locally installed
+- requires initialization.
+- Gives accurate error message when comparing two objects: `Expected Point({ x: 50, y: 50 }) to be Object({ x: 50, y: 50 })`
 
 Basic config
 ```
@@ -56,14 +53,16 @@ Run with
 ```
 jasmine jasmine/*.js
 ```
-Continued in Jasmine Readme
+
 
 ### Mocha
 
 Mocha is a standard Js testing library, that provides access to a wide variety of assertion methods and libraries. Mocha requires a task runner and several other depencancies, or can be run in a browser
 
-Mocha cannot be run from the local project without the path (ie ./node_modules/mocha/bin/mocha.js)
-Mocha can be run if globally installed, but is better when it is locally installed
+##### Observations
+- cannot be run from the local project without the path (ie ./node_modules/mocha/bin/mocha.js)
+- can be run if globally installed, but is better when it is locally installed
+- does not give a clear error when two classes do not equal. example: `AssertionError: Point { x: 50, y: 50 } == { x: 50, y: 50 }`
 
 Basic config
 ```
@@ -88,11 +87,19 @@ Run with (when npm test is bound to `./node_modules/mocha/bin/mocha.js` or `moch
 ```
 npm test mocha/*.js
 ```
-Continued in Mocha Readme
 
 ### Tape
 
-Tape is a light weight, standalone library that allows testing without any task runners. Doesnt require much
+Tape is a light weight, standalone library that allows testing without any task runners.
+
+#### Observation
+- Doesnt require much
+- does not group tests in blocks
+- does not give clear error when two objectes are compared. ie)
+```
+expected: |- { x: 50, y: 50 }
+actual: |- { x: 50, y: 50 }
+```
 
 Basic config
 
@@ -118,6 +125,4 @@ Run with
 ```
 node tape/*.js
 ```
-
-Continued in Tape Readme
 

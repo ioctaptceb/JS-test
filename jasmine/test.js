@@ -29,6 +29,6 @@ describe('A point', function () {
   it('can be shifted on the x coordinate', function () {
     var point = new Gmtry.Point(0, 50);
     var shiftedPoint = point.shift(50, 0);
-    expect(shiftedPoint).toBe({x: 50, y:50});
+    expect(shiftedPoint.x).toBe(50);
   });
 });
