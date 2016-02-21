@@ -9,12 +9,24 @@ function Geometry() {
   }
 
   Line.prototype.intersectX = function intersectX (x) {
-    var y = this.terms[0] * x + this.offset;
+    var y;
+
+    function multiplySlopes(term, index, terms) {
+      var power = terms.length - (index + 1);
+      return term * Math.pow(x, power);
+    }
+
+    function sumSlopes(sum, t) {
+      return sum + t
+    }
+
+    y = this.terms.map(multiplySlopes).reduce(sumSlopes, 0);
+
     return new Point(x, y);
   }
 
   function Line() {
-    this.terms = arguments;
+    this.terms = Array.prototype.slice.call(arguments);
     this.offset = arguments[arguments.length - 1];
   }
 
