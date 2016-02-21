@@ -59,3 +59,10 @@ test('Line', function (suite) {
 
   suite.end();
 });
+
+test('A line', function (suite) {
+  suite.test('exsits', function (t) {
+    var line = new Gmtry.Line(0, 0);
+    t.equal(line.slope, 0);
+  });
+});

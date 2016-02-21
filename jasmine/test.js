@@ -44,3 +44,10 @@ describe('Line', function () {
     expect(Gmtry.Line).toBeDefined();
   });
 });
+
+describe('A line', function () {
+  it('has a slope', function () {
+    var line = new Gmtry.Line(0, 0);
+    expect(line.slope).toBe(0);
+  });
+});
