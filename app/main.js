@@ -9,13 +9,13 @@ function Geometry() {
   }
 
   Line.prototype.intersectX = function intersectX (x) {
-    var y = this.slope * x + this.offset;
+    var y = this.terms[0] * x + this.offset;
     return new Point(x, y);
   }
 
-  function Line(slope, offset) {
-    this.slope = slope;
-    this.offset = offset;
+  function Line() {
+    this.terms = arguments;
+    this.offset = arguments[arguments.length - 1];
   }
 
   return {
