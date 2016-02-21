@@ -1,19 +1,24 @@
-var G = require('../app/main');
+var Gmtry = require('../app/main');
 
 describe('Point', function () {
   it('Exists', function () {
-    expect(G.Point).toBeDefined();
+    expect(Gmtry.Point).toBeDefined();
   });
 });
 
 describe('A point', function () {
   it('is instantiated', function () {
-    var point = new G.Point(0, 0);
+    var point = new Gmtry.Point(0, 0);
     expect(point).toBeDefined();
   });
 
   it('has an X coordinate', function () {
-    var point = new G.Point(0, 0);
-    expect(point.x).toBe(0);
+    var point = new Gmtry.Point(50, 0);
+    expect(point.x).toBe(50);
+  });
+
+  it('has a Y coordinate', function () {
+    var point = new Gmtry.Point(0, 50);
+    expect(point.y).toBe(50);
   });
 });
