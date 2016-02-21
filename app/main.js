@@ -8,8 +8,9 @@ function Geometry() {
     this.y = y;
   }
 
-  function Line(slope) {
+  function Line(slope, offset) {
     this.slope = slope;
+    this.offset = offset;
   }
 
   return {
