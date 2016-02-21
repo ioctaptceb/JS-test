@@ -8,7 +8,8 @@ function Geometry() {
     this.y = y;
   }
 
-  function Line() {
+  function Line(slope) {
+    this.slope = slope;
   }
 
   return {

@@ -64,5 +64,7 @@ test('A line', function (suite) {
   suite.test('exsits', function (t) {
     var line = new Gmtry.Line(0, 0);
     t.equal(line.slope, 0);
+    t.end();
   });
+  suite.end();
 });
