@@ -32,4 +32,10 @@ describe('A point', function () {
     var shiftedPoint = point.shift(50, 0);
     assert.equal(shiftedPoint.x, 50);
   });
+
+  it('can be shifted on the Y axis', function () {
+    var point = new Gmtry.Point(50, 150);
+    var shiftedPoint = point.shift(0, -50);
+    assert.equal(shiftedPoint.y, 100);
+  });
 });
