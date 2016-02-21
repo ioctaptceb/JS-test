@@ -28,3 +28,10 @@ test('A point as a Y coordinate', function (t) {
   t.equal(point.y, 50);
   t.end();
 });
+
+test('A point can be shifted on the x axis', function (t) {
+  var point = new Gmtry.Point(0, 50);
+  var shiftedPoint = point.shift(50, 0);
+  t.equal(shiftedPoint, {x: 50, y:50});
+  t.end();
+});
