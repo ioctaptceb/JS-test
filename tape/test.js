@@ -11,6 +11,8 @@ test('Point', function (suite) {
     t.equal(typeof Gmtry.Point.prototype.shift, 'function');
     t.end();
   });
+
+  suite.end();
 });
 
 test('A point', function(suite) {
@@ -45,4 +47,15 @@ test('A point', function(suite) {
     t.equal(shiftedPoint.y, 100);
     t.end();
   });
+
+  suite.end();
+});
+
+test('Line', function (suite) {
+  suite.test('exists', function (t) {
+    t.equal(typeof Gmtry.Line, 'function');
+    t.end();
+  });
+
+  suite.end();
 });

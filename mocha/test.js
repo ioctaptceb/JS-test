@@ -39,3 +39,9 @@ describe('A point', function () {
     assert.equal(shiftedPoint.y, 100);
   });
 });
+
+describe('Line', function () {
+  it('should be a function', function () {
+    assert.equal(typeof Gmtry.Line, 'function');
+  });
+});

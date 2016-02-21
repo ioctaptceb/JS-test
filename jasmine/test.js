@@ -38,3 +38,9 @@ describe('A point', function () {
     expect(shiftedPoint.y).toBe(100);
   });
 });
+
+describe('Line', function () {
+  it('exists', function () {
+    expect(Gmtry.Line).toBeDefined();
+  });
+});
